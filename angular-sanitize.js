@@ -315,7 +315,7 @@ function $SanitizeProvider() {
   forEach = angular.forEach;
   isArray = angular.isArray;
   isDefined = angular.isDefined;
-  lowercase = angular.$$lowercase;
+  lowercase = angular.lowercase;
   noop = angular.noop;
 
   htmlParser = htmlParserImpl;
@@ -710,8 +710,7 @@ function sanitizeText(chars) {
 
 // define ngSanitize module and register $sanitize service
 angular.module('ngSanitize', [])
-  .provider('$sanitize', $SanitizeProvider)
-  .info({ angularVersion: '1.7.9' });
+  .provider('$sanitize', $SanitizeProvider);
 
 /**
  * @ngdoc filter
